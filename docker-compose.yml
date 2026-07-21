@@ -46,7 +46,7 @@ services:
     volumes:
       - odoo_data:/var/lib/odoo
       - ./config:/etc/odoo
-      - ./custom_addons:/mnt/custom-addons
+      #- ./custom_addons:/mnt/custom-addons
 
 volumes:
   postgres_data:
