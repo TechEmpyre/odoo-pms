@@ -1,0 +1,7 @@
+psycopg2-binary
+Pillow
+lxml
+greenlet
+gevent
+Werkzeug
+requests
