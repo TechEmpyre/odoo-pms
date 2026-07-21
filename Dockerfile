@@ -40,7 +40,7 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 COPY config /etc/odoo
-COPY custom_addons /mnt/custom-addons
+#COPY custom_addons /mnt/custom-addons
 
 COPY entrypoint.sh /
 
