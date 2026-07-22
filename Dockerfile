@@ -1,10 +1,13 @@
-
 FROM python:3.11-slim
 
 ENV LANG=C.UTF-8
+ENV PYTHONUNBUFFERED=1
 
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     git \
+    curl \
+    wget \
     build-essential \
     gcc \
     g++ \
@@ -20,34 +23,52 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     liblcms2-dev \
     libblas-dev \
-    #libatlas-base-dev \
-    node-less \
+    libyaml-dev \
+    libfreetype6-dev \
+    libwebp-dev \
+    libopenjp2-7 \
+    libtiff6 \
     npm \
-    #wkhtmltopdf \
+    node-less \
     postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
-RUN useradd -m -d /var/lib/odoo -U odoo
+# Create odoo user
+RUN useradd -m -d /var/lib/odoo -U -s /bin/bash odoo
 
 WORKDIR /opt
 
-COPY odoo ./odoo
-COPY enterprise ./enterprise
+# Copy Odoo source
+COPY odoo /opt/odoo
 
-COPY requirements.txt .
+# Copy Enterprise source
+COPY enterprise /opt/enterprise
 
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
+# Copy configuration
 COPY config /etc/odoo
-#COPY custom_addons /mnt/custom-addons
 
-COPY entrypoint.sh /
+# Copy custom requirements (optional)
+COPY requirements.txt /tmp/custom-requirements.txt
+
+# Install Python packages
+RUN python -m pip install --upgrade pip setuptools wheel
+
+# Install Odoo dependencies
+RUN pip install --no-cache-dir -r /opt/odoo/requirements.txt
+
+# Install custom dependencies (if any)
+RUN if [ -f /tmp/custom-requirements.txt ]; then \
+        pip install --no-cache-dir -r /tmp/custom-requirements.txt; \
+    fi
+
+# Copy entrypoint
+COPY entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
 
-RUN chown -R odoo:odoo /opt
-RUN chown -R odoo:odoo /var/lib/odoo
+# Create filestore directory
+RUN mkdir -p /var/lib/odoo && \
+    chown -R odoo:odoo /opt /var/lib/odoo /etc/odoo
 
 USER odoo
 
