@@ -20,10 +20,10 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     liblcms2-dev \
     libblas-dev \
-    libatlas-base-dev \
+    #libatlas-base-dev \
     node-less \
     npm \
-    wkhtmltopdf \
+    #wkhtmltopdf \
     postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
@@ -40,7 +40,7 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 COPY config /etc/odoo
-COPY custom_addons /mnt/custom-addons
+#COPY custom_addons /mnt/custom-addons
 
 COPY entrypoint.sh /
 
