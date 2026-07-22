@@ -24,7 +24,7 @@ from odoo import api, models
 
 class ReportProjectPdfProjectReportTemplate(models.AbstractModel):
     """ Pdf reports """
-    _name = 'report.project_report_pdf.report_project_project'
+    _name = 'report.te_project_report_pdf.report_project_project'
     _description = 'Project Report'
 
     @api.model

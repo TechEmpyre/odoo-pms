@@ -107,7 +107,7 @@
         <field name="arch" type="xml">
             <field name="privacy_visibility" position="after">
                 <field name="team_id"
-                       context="{'form_view_ref': 'project_team.projects_team_view_form', 'default_type_team':'project'}"/>
+                       context="{'form_view_ref': 'te_project_team.projects_team_view_form', 'default_type_team':'project'}"/>
             </field>
             <page name="settings" position="after">
                 <page string="Team">

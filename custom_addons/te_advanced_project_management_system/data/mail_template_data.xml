@@ -5,8 +5,7 @@
         <record id="document_expire_notification_to_customer"
                 model="mail.template">
             <field name="name">Document Expire Notification</field>
-            <field name="model_id"
-                   ref="advanced_project_management_system.model_ir_attachment"/>
+            <field name="model_id" ref="base.model_ir_attachment"/>
             <field name="auto_delete" eval="True"/>
             <field name="email_from">{{object.company_id.email}}</field>
             <field name="email_to">{{object.partner_id.email}}</field>
@@ -39,8 +38,7 @@
         <record id="document_expire_notification_mail_template"
                 model="mail.template">
             <field name="name">Document Expire Notification</field>
-            <field name="model_id"
-                   ref="advanced_project_management_system.model_ir_attachment"/>
+            <field name="model_id" ref="base.model_ir_attachment"/>
             <field name="auto_delete" eval="True"/>
             <field name="email_from">{{object.company_id.email}}</field>
             <field name="email_to">{{object.document_email_to}}</field>
@@ -74,8 +72,7 @@
         <record id="task_due_email_notification"
                 model="mail.template">
             <field name="name">Task due Notification</field>
-            <field name="model_id"
-                   ref="advanced_project_management_system.model_project_task"/>
+            <field name="model_id" ref="project.model_project_task"/>
             <field name="auto_delete" eval="True"/>
             <field name="email_from">{{object.company_id.email}}</field>
             <field name="email_to">{{object._get_user_emails()}}</field>

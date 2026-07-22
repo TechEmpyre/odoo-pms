@@ -53,7 +53,7 @@ class ProjectReport(models.TransientModel):
             'partner_select': self.partner_select
         }
         report_reference = (
-            self.env.ref('project_report_pdf.action_report_project_project')
+            self.env.ref('te_project_report_pdf.action_report_project_project')
             .report_action(self, data=data))
         report_reference.update({'close_on_report_download': True})
         return report_reference

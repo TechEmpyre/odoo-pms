@@ -39,7 +39,7 @@
              ],
     'assets': {
         'web.assets_backend': [
-            'project_report_pdf/static/src/js/action_manager.js',
+            'te_project_report_pdf/static/src/js/action_manager.js',
         ],
     },
     'images': ['static/description/banner.jpg'],

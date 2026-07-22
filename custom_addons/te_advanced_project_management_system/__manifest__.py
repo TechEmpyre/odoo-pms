@@ -67,20 +67,20 @@
     ],
     'assets': {
         'web.assets_backend': [
-            'advanced_project_management_system/static/src/scss/style.scss',
-            'advanced_project_management_system/static/src/xml/chatter_templates.xml',
-            'advanced_project_management_system/static/src/js/composer_patch.js',
+            'te_advanced_project_management_system/static/src/scss/style.scss',
+            'te_advanced_project_management_system/static/src/xml/chatter_templates.xml',
+            'te_advanced_project_management_system/static/src/js/composer_patch.js',
 
         ],
     'web.assets_backend_lazy': [
-        'advanced_project_management_system/static/src/js/burnup_chart_search_model.js',
-        'advanced_project_management_system/static/src/js/burnup_chart_model.js',
-        'advanced_project_management_system/static/src/js/burnup_chart_view.js',
-        'advanced_project_management_system/static/src/xml/burnup_chart_view.xml',
-        'advanced_project_management_system/static/src/js/velocity_chart_model.js',
-        'advanced_project_management_system/static/src/js/velocity_chart_search_model.js',
-        'advanced_project_management_system/static/src/js/velocity_chart_view.js',
-        'advanced_project_management_system/static/src/xml/velocity_chart_view.xml',
+        'te_advanced_project_management_system/static/src/js/burnup_chart_search_model.js',
+        'te_advanced_project_management_system/static/src/js/burnup_chart_model.js',
+        'te_advanced_project_management_system/static/src/js/burnup_chart_view.js',
+        'te_advanced_project_management_system/static/src/xml/burnup_chart_view.xml',
+        'te_advanced_project_management_system/static/src/js/velocity_chart_model.js',
+        'te_advanced_project_management_system/static/src/js/velocity_chart_search_model.js',
+        'te_advanced_project_management_system/static/src/js/velocity_chart_view.js',
+        'te_advanced_project_management_system/static/src/xml/velocity_chart_view.xml',
 
     ]
     },

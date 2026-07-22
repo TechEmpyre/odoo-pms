@@ -5,10 +5,10 @@
         <field name="name">Print Project</field>
         <field name="model">project.project</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">advanced_project_management_system.project_details_report</field>
+        <field name="report_name">te_advanced_project_management_system.project_details_report</field>
         <field name="report_file">project_report</field>
         <field name="print_report_name">'Project Details'</field>
-        <field name="binding_model_id" ref="model_project_project"/>
+        <field name="binding_model_id" ref="project.model_project_project"/>
         <field name="binding_type">report</field>
     </record>
     <!-- task report action-->
@@ -16,10 +16,10 @@
         <field name="name">Print Task</field>
         <field name="model">project.task</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">advanced_project_management_system.task_details_report</field>
+        <field name="report_name">te_advanced_project_management_system.task_details_report</field>
         <field name="report_file">task_report</field>
         <field name="print_report_name">'Task Details'</field>
-        <field name="binding_model_id" ref="model_project_task"/>
+        <field name="binding_model_id" ref="project.model_project_task"/>
         <field name="binding_type">report</field>
     </record>
 </odoo>

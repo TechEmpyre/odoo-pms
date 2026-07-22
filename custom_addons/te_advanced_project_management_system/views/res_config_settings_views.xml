@@ -28,7 +28,7 @@
             </xpath>
             <xpath expr="//block[@name='project_time']" position="after">
                 <block title="Project Order Document" name="project_order_document"
-                       groups="advanced_project_management_system.ir_attachment_group_user">
+                       groups="te_advanced_project_management_system.ir_attachment_group_user">
                     <setting id="document_expiry_notification_setting"
                              help="Set mail document expiry notification">
                         <field name="document_expiry_notification" field_id="document_expiry_notification"/>

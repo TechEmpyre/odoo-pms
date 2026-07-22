@@ -76,12 +76,12 @@ class IrAttachment(models.Model):
             for attachment in attachments:
                 if attachment.expiry_date < fields.Date.today():
                     mail_template = attachment.env.ref(
-                        'advanced_project_management_system.document_expire_notification_to_customer')
+                        'te_advanced_project_management_system.document_expire_notification_to_customer')
                     mail_template.send_mail(attachment.id, force_send=True)
         attachments = self.search([('expiry_date', '!=', None)])
         for attachment in attachments:
             if attachment.expiry_notification:
                 if attachment.expiry_date < fields.Date.today():
                     mail_template = attachment.env.ref(
-                        'advanced_project_management_system.document_expire_notification_mail_template')
+                        'te_advanced_project_management_system.document_expire_notification_mail_template')
                     mail_template.send_mail(attachment.id, force_send=True)

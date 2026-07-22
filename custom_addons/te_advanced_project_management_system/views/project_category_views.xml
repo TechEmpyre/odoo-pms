@@ -44,7 +44,7 @@
     <!-- project category menu -->
     <menuitem id="project_category_menu" name="Project Category"
               sequence="450"
-              groups="advanced_project_management_system.group_project_category"
+              groups="te_advanced_project_management_system.group_project_category"
               parent="project.menu_project_config"
               action="project_category_action">
     </menuitem>

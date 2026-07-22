@@ -32,33 +32,33 @@ class ResConfigSettings(models.TransientModel):
     is_project_category = fields.Boolean(
         string='Enable Project Category',
         help="Enabling project category",
-        config_parameter='advanced_project_management_system.is_project_category')
+        config_parameter='te_advanced_project_management_system.is_project_category')
     document_expiry_notification = fields.Boolean(
         string='Document Expiry Notification',
         help="For sending document expiry notification",
-        config_parameter='advanced_project_management_system.document_expiry_notification')
+        config_parameter='te_advanced_project_management_system.document_expiry_notification')
     notify_customer = fields.Boolean(
         string='Notify Customer',
         help="For notifying the customer",
-        config_parameter='advanced_project_management_system.notify_customer')
+        config_parameter='te_advanced_project_management_system.notify_customer')
     on_expiry_notification = fields.Boolean(
         string='On Expiry Date Notification', help="Sent expiry notification",
-        config_parameter='advanced_project_management_system.on_expiry_notification')
+        config_parameter='te_advanced_project_management_system.on_expiry_notification')
     email = fields.Char(
         string='Notify Email to', help="Get email id",
-        config_parameter='advanced_project_management_system.email')
+        config_parameter='te_advanced_project_management_system.email')
     notify_days = fields.Integer(
         string='Notify After Expiry Date',
         help="Notification sent before these days",
-        config_parameter='advanced_project_management_system.notify_days')
+        config_parameter='te_advanced_project_management_system.notify_days')
     is_overdue_notification = fields.Boolean(
         string='Overdue Notification?',
         help="For sending overdue notification",
-        config_parameter='advanced_project_management_system.is_overdue_notification')
+        config_parameter='te_advanced_project_management_system.is_overdue_notification')
     notification_before = fields.Integer(
         string='Notification Days',
         help="Sent notification before these days",
-        config_parameter='advanced_project_management_system.notification_before')
+        config_parameter='te_advanced_project_management_system.notification_before')
 
     @api.onchange('is_project_category')
     def _onchange_is_project_category(self):
@@ -67,7 +67,7 @@ class ResConfigSettings(models.TransientModel):
         based on the configuration setting toggle.
         """
         groups = self.env.ref(
-            'advanced_project_management_system.group_project_category')
+            'te_advanced_project_management_system.group_project_category')
         if self.is_project_category:
             groups.write({'user_ids': [(4, self.env.user.id)]})
         else:

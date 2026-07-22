@@ -35,9 +35,9 @@
     'data': ['views/dashboard_views.xml'],
     'assets': {
         'web.assets_backend': [
-            'project_dashboard_odoo/static/src/js/dashboard.js',
-            'project_dashboard_odoo/static/src/css/dashboard.css',
-            'project_dashboard_odoo/static/src/xml/dashboard_templates.xml',
+            'te_project_dashboard_odoo/static/src/js/dashboard.js',
+            'te_project_dashboard_odoo/static/src/css/dashboard.css',
+            'te_project_dashboard_odoo/static/src/xml/dashboard_templates.xml',
             'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js'
         ]},
     'images': ['static/description/banner.png'],

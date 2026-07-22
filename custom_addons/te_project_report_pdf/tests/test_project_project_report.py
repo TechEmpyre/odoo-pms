@@ -29,7 +29,7 @@ class TestReportProjectProjectPdf(TransactionCase):
     def setUpClass(cls):
         super().setUpClass()
         cls.report_model = cls.env[
-            'report.project_report_pdf.report_project_project'
+            'report.te_project_report_pdf.report_project_project'
         ]
         cls.demo_user = cls.env.ref('base.user_demo')
         cls.admin_user = cls.env.ref('base.user_admin')

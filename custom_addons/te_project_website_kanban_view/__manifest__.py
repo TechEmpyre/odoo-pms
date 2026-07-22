@@ -41,7 +41,7 @@
     ],
     'assets': {
         'web.assets_frontend': [
-            '/project_website_kanban_view/static/src/css/style.css',
+            '/te_project_website_kanban_view/static/src/css/style.css',
             'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css',
             'https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js',
             'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js',

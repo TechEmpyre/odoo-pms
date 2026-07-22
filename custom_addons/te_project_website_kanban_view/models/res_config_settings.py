@@ -33,5 +33,5 @@ class ResConfigSettings(models.TransientModel):
     task_per_pager = fields.Integer(
         string="Task per page in Kanban View",
         help="Minimum number of tasks per page.",
-        config_parameter='project_website_kanban_view.task_per_pager')
+        config_parameter='te_project_website_kanban_view.task_per_pager')
     

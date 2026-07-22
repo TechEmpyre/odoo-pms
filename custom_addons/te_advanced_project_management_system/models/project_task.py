@@ -153,7 +153,7 @@ class ProjectTask(models.Model):
                         'Done',
                         'Canceled') and task.date_deadline and task.date_deadline < fields.Date.today():
                     mail_template = task.env.ref(
-                        'advanced_project_management_system.task_due_email_notification')
+                        'te_advanced_project_management_system.task_due_email_notification')
                     mail_template.send_mail(task.id, force_send=True)
 
     # ---------------------------------------------------------

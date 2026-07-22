@@ -7,7 +7,7 @@
     <!-- Record rule "Project Task Visible Users" -->
     <record id="project_task_rule_user" model="ir.rule">
         <field name="name">Project Task Visible Users</field>
-        <field name="model_id" ref="model_project_task"/>
+        <field name="model_id" ref="project.model_project_task"/>
         <field name="domain_force">['|', ('task_access_user_ids', 'in', user.id), ('task_access_user_ids', '=', False)]</field>
         <field name="groups" eval="[(4, ref('group_view_limited_projects_and_tasks'))]"/>
         <field name="perm_read" eval="True"/>
@@ -19,7 +19,7 @@
     <!-- Record rule "Project Visible Users" -->
     <record id="project_project_rule_user" model="ir.rule">
         <field name="name">Project Project Visible Users</field>
-        <field name="model_id" ref="model_project_project"/>
+        <field name="model_id" ref="project.model_project_project"/>
         <field name="domain_force">['|', ('project_access_user_ids', 'in', user.id), ('project_access_user_ids', '=', False)]</field>
         <field name="groups" eval="[(4, ref('group_view_limited_projects_and_tasks'))]"/>
         <field name="perm_read" eval="True"/>

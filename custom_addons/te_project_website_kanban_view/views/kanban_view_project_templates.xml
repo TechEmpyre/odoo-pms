@@ -45,13 +45,13 @@
                         <div class="mt-3 mb-3 list-view-icon">
                             <a t-att-href="default_url + '?' + keep_query('*', viewtype='list')">
                                 <img class="w-100"
-                                     src="/project_website_kanban_view/static/src/images/img-list-view.png"/>
+                                     src="/te_project_website_kanban_view/static/src/images/img-list-view.png"/>
                             </a>
                         </div>
                         <div class="mt-3 mb-3 thumbnail-view-icon mr-2">
                             <a t-att-href="default_url + '?' + keep_query('*', viewtype='kanban')">
                                 <img class="w-100"
-                                     src="/project_website_kanban_view/static/src/images/img-thumbnail-view.png"/>
+                                     src="/te_project_website_kanban_view/static/src/images/img-thumbnail-view.png"/>
                             </a>
                         </div>
                     </div>
@@ -161,7 +161,7 @@
         </xpath>
         <xpath expr="//table[hasclass('o_portal_my_doc_table')]"
                position="before">
-            <t t-call="project_website_kanban_view.project_kanban_view_template"/>
+            <t t-call="te_project_website_kanban_view.project_kanban_view_template"/>
         </xpath>
     </template>
 </odoo>

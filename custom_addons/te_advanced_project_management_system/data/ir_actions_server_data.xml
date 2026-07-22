@@ -4,8 +4,8 @@
         <!-- server action for updating project stage -->
         <record id="project_stage_multi_update" model="ir.actions.server">
             <field name="name">Mass Stage Update</field>
-            <field name="model_id" ref="model_project_project"/>
-            <field name="binding_model_id" ref="model_project_project"/>
+            <field name="model_id" ref="project.model_project_project"/>
+            <field name="binding_model_id" ref="project.model_project_project"/>
             <field name="state">code</field>
             <field name="code">
                 action = record.project_multi_stage_update()
@@ -14,8 +14,8 @@
         <!-- server action for mass task details update -->
         <record id="task_mass_update" model="ir.actions.server">
             <field name="name">Mass Update</field>
-            <field name="model_id" ref="model_project_task"/>
-            <field name="binding_model_id" ref="model_project_task"/>
+            <field name="model_id" ref="project.model_project_task"/>
+            <field name="binding_model_id" ref="project.model_project_task"/>
             <field name="state">code</field>
             <field name="code">
                 action = record.task_mass_update()

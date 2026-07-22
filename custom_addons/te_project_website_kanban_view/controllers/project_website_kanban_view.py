@@ -152,7 +152,7 @@ class ProjectCustomerPortal(CustomerPortal):
             domain=domain, su=su, project=project)
         task_per_page = int(
             request.env['ir.config_parameter'].sudo().get_param(
-                "project_website_kanban_view.task_per_pager"))
+                "te_project_website_kanban_view.task_per_pager"))
         self._items_per_page = task_per_page
         if task_per_page == 0:
             raise ValidationError(_(

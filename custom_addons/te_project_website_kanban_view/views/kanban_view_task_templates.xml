@@ -100,7 +100,7 @@
                                                         <span t-field="task.project_id.name"/>
                                                     </span>
                                                     <div class="clock">
-                                                        <img src="/project_website_kanban_view/static/src/images/clock.png"/>
+                                                        <img src="/te_project_website_kanban_view/static/src/images/clock.png"/>
                                                         <span class="date-task-box">
                                                             <span t-field="task.date_deadline"/>
                                                         </span>
@@ -145,7 +145,7 @@
               inherit_id="portal.portal_table">
         <xpath expr="//table[hasclass('o_portal_my_doc_table')]"
                position="before">
-            <t t-call="project_website_kanban_view.project_task_kanban_view_template"/>
+            <t t-call="te_project_website_kanban_view.project_task_kanban_view_template"/>
         </xpath>
     </template>
 </odoo>

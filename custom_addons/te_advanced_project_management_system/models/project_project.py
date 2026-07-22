@@ -135,7 +135,7 @@ class ProjectProject(models.Model):
                 'icon': 'area-chart',
                 'text': _('Burnup Chart'),
                 'action_type': 'action',
-                'action': 'advanced_project_management_system.action_project_task_burnup_chart_report',
+                'action': 'te_advanced_project_management_system.action_project_task_burnup_chart_report',
                 'additional_context': json.dumps({
                     'active_id': self.id,
                 }),
@@ -147,7 +147,7 @@ class ProjectProject(models.Model):
                 'icon': 'line-chart',
                 'text': _('Velocity Chart'),
                 'action_type': 'action',
-                'action': 'advanced_project_management_system.action_project_velocity_chart_report',
+                'action': 'te_advanced_project_management_system.action_project_velocity_chart_report',
                 'additional_context': json.dumps({
                     'active_id': self.id,
                 }),
@@ -170,8 +170,7 @@ class ProjectProject(models.Model):
             'res_model': 'project.project',
             'view_mode': 'form',
             'view_id': self.env.ref(
-                'advanced_project_management_system.project.project.view.form.'
-                'simplified').id,
+                'project.project_project_view_form_simplified').id,
             'target': 'current',
         }
 
@@ -235,7 +234,7 @@ class ProjectProject(models.Model):
     def action_project_task_burnup_chart_report(self):
         """ Open the Burnup Chart report for the project """
         action = self.env['ir.actions.act_window']._for_xml_id(
-            'advanced_project_management_system'
+            'te_advanced_project_management_system'
             '.action_project_task_burnup_chart_report')
         action['display_name'] = _("%(name)s's Burnup Chart", name=self.name)
         return action
@@ -243,7 +242,7 @@ class ProjectProject(models.Model):
     def action_project_velocity_chart_report(self):
         """ Open the Velocity Chart report for the project """
         action = self.env['ir.actions.act_window']._for_xml_id(
-            'advanced_project_management_system'
+            'te_advanced_project_management_system'
             '.action_project_velocity_chart_report')
         action['display_name'] = _("%(name)s's Velocity Chart",
                                    name=self.name)
@@ -252,7 +251,7 @@ class ProjectProject(models.Model):
     def action_open_shortcut(self):
         """ Open the shortcut creation form """
         view_id = self.env.ref(
-            'advanced_project_management_system.project_shortcut_view_form').id
+            'te_advanced_project_management_system.project_shortcut_view_form').id
         return {
             'name': 'Add Custom Project Shortcut',
             'view_type': 'form',

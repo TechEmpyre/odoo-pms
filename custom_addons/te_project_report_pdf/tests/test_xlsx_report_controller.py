@@ -26,7 +26,7 @@ from odoo.tests.common import TransactionCase
 
 
 class TestXLSXReportController(TransactionCase):
-    """Test suite for controllers/project_report_pdf.py — XLSXReportController.
+    """Test suite for controllers/te_project_report_pdf.py — XLSXReportController.
     """
 
     @classmethod

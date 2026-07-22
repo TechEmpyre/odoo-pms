@@ -22,7 +22,7 @@
 
                         <!-- Excel sample -->
                         <a class="btn btn-primary mb32 mt8 fa fa-download"
-                           href="/advanced_project_management_system/static/xls/task_checklist.xlsx"
+                           href="/te_advanced_project_management_system/static/xls/task_checklist.xlsx"
                            aria-label="Download"
                            title="Download Excel"
                            invisible="download_sample_file == False or file_type != 'excel'">
@@ -31,7 +31,7 @@
 
                         <!-- CSV sample -->
                         <a class="btn btn-primary mb32 mt8 fa fa-download"
-                           href="/advanced_project_management_system/static/csv/task_checklist.csv"
+                           href="/te_advanced_project_management_system/static/csv/task_checklist.csv"
                            aria-label="Download"
                            title="Download CSV"
                            invisible="download_sample_file == False or file_type != 'csv'">
