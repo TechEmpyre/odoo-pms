@@ -1,0 +1,50 @@
+# -*- coding: utf-8 -*-
+###############################################################################
+#
+#    TechEmpyre
+#
+#    Copyright (C) 2026-TODAY TechEmpyre(<https://www.techempyre.com>)
+#    Author:  TechEmpyre(<https://www.techempyre.com>)
+#
+#    You can modify it under the terms of the GNU AFFERO
+#    GENERAL PUBLIC LICENSE (AGPL v3), Version 3.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU AFFERO GENERAL PUBLIC LICENSE (AGPL v3) for more details.
+#
+#    You should have received a copy of the GNU AFFERO GENERAL PUBLIC LICENSE
+#    (AGPL v3) along with this program.
+#    If not, see <http://www.gnu.org/licenses/>.
+#
+###############################################################################
+{
+    'name': 'Project Report XLS & PDF',
+    'version': '19.0.1.0.0',
+    'category': 'Project',
+    'summary': 'Advanced PDF & XLS reports for project.',
+    'description': """Advanced PDF & XLS reports for project with filters for
+    stage and assigned person.""",
+    'author': 'TechEmpyre',
+    'company': 'TechEmpyre',
+    'maintainer': 'TechEmpyre',
+    'website': "https://www.techempyre.com",
+    'depends': ['project'],
+    'data': ['security/ir.model.access.csv',
+             'wizard/project_report_view.xml',
+             'views/project_project_view.xml',
+             'report/project_report_template.xml',
+             'views/report_project_project.xml'
+             ],
+    'assets': {
+        'web.assets_backend': [
+            'project_report_pdf/static/src/js/action_manager.js',
+        ],
+    },
+    'images': ['static/description/banner.jpg'],
+    'license': 'AGPL-3',
+    'installable': True,
+    'auto_install': False,
+    'application': False
+}

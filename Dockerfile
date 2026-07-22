@@ -47,6 +47,7 @@ WORKDIR /opt
 # Copy application files with correct ownership
 COPY --chown=odoo:odoo odoo /opt/odoo
 COPY --chown=odoo:odoo enterprise /opt/enterprise
+COPY --chown=odoo:odoo custom_addons /opt/custom_addons
 COPY --chown=odoo:odoo config /etc/odoo
 COPY --chown=odoo:odoo requirements.txt /tmp/custom-requirements.txt
 COPY --chown=odoo:odoo entrypoint.sh /entrypoint.sh
