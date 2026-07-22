@@ -38,10 +38,10 @@ services:
       - "8072:8072"
 
     environment:
-      DB_HOST: db
+      DB_HOST: aj2bw2o3sd2bt46ogq2b7jfk
       DB_PORT: 5432
-      DB_USER: odoo
-      DB_PASSWORD: odoo
+      DB_USER: postgres
+      DB_PASSWORD: lw2dxkJGaQG9oPHRoiIXozNeDAvUfn3JwHbVQG2MnOKtxw3YGwngOZ9K1smh31KK
 
     volumes:
       - odoo_data:/var/lib/odoo
