@@ -1,11 +1,13 @@
-#!/bin/bash
-
+#!/bin/sh
 set -e
 
-until pg_isready -h $HOST -U $USER
+until pg_isready \
+    -h "$DB_HOST" \
+    -p "$DB_PORT" \
+    -U "$DB_USER"
 do
-  echo "Waiting for PostgreSQL..."
-  sleep 2
+    echo "Waiting for PostgreSQL..."
+    sleep 2
 done
 
 exec python3 /opt/odoo/odoo-bin \
